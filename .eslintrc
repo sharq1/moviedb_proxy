@@ -1,10 +1,10 @@
 {
   "parser": "babel-eslint",
-  "extends": "airbnb",
+  "extends": "eslint:recommended",
   "settings": {
     "import/resolver": {
       "webpack": {
-        "config": "./webpack.config.dev.js"
+        "config": "./webpack.config.js"
       }
     }
   },
@@ -26,17 +26,16 @@
     "consistent-return": 0,
     "newline-per-chained-call": 0,
     "global-require": 0,
-    "react/jsx-filename-extension": 0,
     "import/no-extraneous-dependencies": 0,
     "no-plusplus": 0,
     "arrow-parens": ["error", "always"],
-    "react/forbid-prop-types": ["error", { "forbid": ["any", "array"] }],
     "comma-dangle": ["error", {
       "arrays": "always-multiline",
       "objects": "always-multiline",
       "imports": "never",
       "exports": "never",
       "functions": "never"
-    }]
+    }],
+    "semi": ["error", "always"]
   }
 }

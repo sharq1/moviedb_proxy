@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>TheMovieDB proxy</title>
     <link rel="stylesheet" href="./css/style.css" />
-    <script src="./index.js"></script>
 
     <template id="empty"></template>
     <template id="fetching"></template>
@@ -14,9 +13,13 @@
   </head>
 
   <body>
-    <input id="searchQuery" />
-    <input type="submit" id="search" />
+    <form id="searchForm">
+      <input id="searchQuery" />
+      <input type="submit" id="search" />
+    </form>
 
     <div id="resultsContainer"></div>
+
+    <script src="./build/index.js"></script>
   </body>
 </html>
