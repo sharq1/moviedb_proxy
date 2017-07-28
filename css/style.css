@@ -1,0 +1,30 @@
+:root {
+  --block-padding: 20px;
+  --text-color: #666;
+  --border-color: #eee;
+  --active-text-color: #fff;
+  --active-bg-color: #0086D8;
+}
+
+.search {
+  padding: var(--block-padding);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.search--input {
+  padding: 5px 10px;
+
+  color: var(--text-color);
+}
+
+.search--button {
+  padding: 5px 10px;
+  border: 1px solid var(--active-bg-color);
+
+  color: var(--active-text-color);
+  background-color: var(--active-bg-color);
+}
+
+.results {
+  padding: var(--block-padding);
+}
