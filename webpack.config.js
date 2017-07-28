@@ -22,4 +22,4 @@ module.exports = {
   plugins: [
     new webpack.EnvironmentPlugin(['TMDB_KEY']),
   ],
-},
+}

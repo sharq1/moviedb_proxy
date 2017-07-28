@@ -12,6 +12,8 @@ const router = new Router({
 new SearchMediator({
   navigate: router.navigate,
   form: document.getElementById('searchForm'),
+  searchInput: document.getElementById('searchQuery'),
+  resultsContainer: document.getElementById('results'),
 });
 
 console.log('App started ✔');

@@ -3,7 +3,7 @@ import TMDB from 'themoviedb-javascript-library';
 /**
  * themoviedb facade
  */
-export default class {
+export default class SearchFacade {
   constructor() {
     this.tmdb = TMDB;
     this.tmdb.common.api_key = process.env.TMDB_KEY;
