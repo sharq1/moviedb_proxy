@@ -1,19 +1,26 @@
 import Router from './Router';
+import SearchForm from './SearchForm';
 import SearchMediator from './SearchMediator';
 
-const setContent = (content, params) => {
-  console.log('setContent', content, params);
+const QUERY_TRIGGERED = 'QUERY_TRIGGERED';
+
+new SearchMediator({
+  queryEventName: QUERY_TRIGGERED,
+  resultsContainer: document.getElementById('results'),
+});
+
+const routeChanged = (content, params) => {
+  document.dispatchEvent(new CustomEvent(QUERY_TRIGGERED, { detail: params.query }));
 };
 
 const router = new Router({
-  setContent: setContent,
+  routeChanged,
 });
 
-new SearchMediator({
+new SearchForm({
   navigate: router.navigate,
   form: document.getElementById('searchForm'),
   searchInput: document.getElementById('searchQuery'),
-  resultsContainer: document.getElementById('results'),
 });
 
 console.log('App started ✔');

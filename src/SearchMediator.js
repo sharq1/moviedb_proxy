@@ -1,32 +1,30 @@
 import SearchFacade from './SearchFacade';
 
 /**
- * Search mediator
+ * Search mediator - listens to search event and transforms it to query for SearchFacade
  */
 export default class SearchMediator {
-  constructor({ navigate, form, searchInput, resultsContainer }) {
+  constructor({ queryEventName, resultsContainer }) {
+    this.onSearchSubmit = this.onSearchSubmit.bind(this);
     this.db = new SearchFacade();
-    this.navigate = navigate;
-    this.form = form;
-    this.searchInput = searchInput;
     this.resultsContainer = resultsContainer;
 
-    this.form.addEventListener('submit', this.onSearchSubmit.bind(this));
+    document.addEventListener(queryEventName, this.onSearchSubmit.bind(this));
   }
 
-  onSearchSubmit() {
-    const query = this.searchInput.value;
+  onSearchSubmit(event) {
+    const query = event.detail;
 
-    this.db.search(query)
-      .then((results) => {
-        this.onSearchSuccess(results);
-      })
+    return this.db.search(query)
+      .then((results) => this.onSearchSuccess(results))
       .catch((error) => {
         console.error('search failed', error);
+        return { error };
       });
   }
 
   onSearchSuccess(data) {
     console.log('onSearchSuccess', data);
+    return true;
   }
 }

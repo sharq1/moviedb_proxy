@@ -45,6 +45,16 @@
               
                 
                 <li><a
+                  href='#searchform'
+                  class="">
+                  SearchForm
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
                   href='#searchmediator'
                   class="">
                   SearchMediator
@@ -114,7 +124,7 @@
             <tbody class='mt1'>
               
                 <tr>
-                  <td class='break-word'><span class='code bold'>$0.setContent</span> <code class='quiet'>any</code>
+                  <td class='break-word'><span class='code bold'>$0.routeChanged</span> <code class='quiet'>any</code>
                   </td>
                   <td class='break-word'><span></span></td>
                 </tr>
@@ -158,7 +168,7 @@
   </div>
   
 
-  <p>themoviedb facade</p>
+  <p>themoviedb facade - responsible for retrieving movie data from TheMobieDb</p>
 
 
   <div class='pre p1 fill-light mt0'>new SearchFacade()</div>
@@ -197,18 +207,18 @@
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id='searchmediator'>
-      SearchMediator
+    <h3 class='fl m0' id='searchform'>
+      SearchForm
     </h3>
     
     
   </div>
   
 
-  <p>Search mediator</p>
+  <p>Search form handler - listens to submit event in case of which it send URL update request</p>
 
 
-  <div class='pre p1 fill-light mt0'>new SearchMediator($0: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</div>
+  <div class='pre p1 fill-light mt0'>new SearchForm($0: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</div>
   
   
 
@@ -250,6 +260,100 @@
               
                 <tr>
                   <td class='break-word'><span class='code bold'>$0.form</span> <code class='quiet'>any</code>
+                  </td>
+                  <td class='break-word'><span></span></td>
+                </tr>
+              
+                <tr>
+                  <td class='break-word'><span class='code bold'>$0.searchInput</span> <code class='quiet'>any</code>
+                  </td>
+                  <td class='break-word'><span></span></td>
+                </tr>
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='searchmediator'>
+      SearchMediator
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Search mediator - listens to search event and transforms it to query for SearchFacade</p>
+
+
+  <div class='pre p1 fill-light mt0'>new SearchMediator($0: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>$0</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+                  <td class='break-word'><span class='code bold'>$0.queryEventName</span> <code class='quiet'>any</code>
+                  </td>
+                  <td class='break-word'><span></span></td>
+                </tr>
+              
+                <tr>
+                  <td class='break-word'><span class='code bold'>$0.resultsContainer</span> <code class='quiet'>any</code>
                   </td>
                   <td class='break-word'><span></span></td>
                 </tr>
