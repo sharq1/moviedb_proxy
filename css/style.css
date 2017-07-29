@@ -6,6 +6,15 @@
   --active-bg-color: #0086D8;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+.title {
+  padding: var(--block-padding);
+  margin: 0 !important;
+}
+
 .search {
   padding: var(--block-padding);
   border-bottom: 1px solid var(--border-color);
@@ -26,5 +35,27 @@
 }
 
 .results {
+  width: 600px;
+  max-width: 100%;
+
   padding: var(--block-padding);
+
+  list-style: none;
+}
+
+.movie {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+
+  margin-bottom: 20px;
+}
+
+.movie--poster {
+  width: 92px;
+  height: 138px;
+
+  background-color: #eee;
 }

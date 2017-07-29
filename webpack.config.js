@@ -20,6 +20,6 @@ module.exports = {
     ],
   },
   plugins: [
-    new webpack.EnvironmentPlugin(['TMDB_KEY']),
+    new webpack.EnvironmentPlugin(['TMDB_KEY', 'IMAGE_BASE_URL']),
   ],
 }

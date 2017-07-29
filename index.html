@@ -9,16 +9,23 @@
     <template id="fetching"></template>
     <template id="movie"></template>
     <template id="moviesSingleMovie"></template>
-    <template id="movies"></template>
+    <template id="movies">
+      <li class="movie">
+        <span class="movie--name"></span>
+        <img class="movie--poster" />
+      </li>
+    </template>
   </head>
 
   <body>
+    <h1 class="title">TheMovieDB proxy</h1>
+
     <form id="searchForm" class="search">
       <input id="searchQuery" class="search--input" />
-      <input type="submit" id="search" class="search--button" />
+      <input type="submit" id="search" class="search--button" value="Search" />
     </form>
 
-    <div id="results" class="results"></div>
+    <ul id="results" class="results"></ul>
 
     <script src="./build/index.js"></script>
   </body>
